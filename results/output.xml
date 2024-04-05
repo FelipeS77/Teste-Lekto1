@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-05T14:31:06.764466" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste-Lekto" source="C:\Users\viyte\OneDrive\Documentos\GitHub\Teste-Lekto">
+<suite id="s1-s1" name="Enviarform" source="C:\Users\viyte\OneDrive\Documentos\GitHub\Teste-Lekto\enviarform.robot">
+<test id="s1-s1-t1" name="Cenário 1 : Preencher Formulário" line="10">
+<kw name="Abrir" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:07.603377" level="INFO">Opening browser 'chrome' to base url 'https://www.lekto.com.br/'.</msg>
+<arg>https://www.lekto.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-05T14:31:07.603377" elapsed="6.731279"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-05T14:31:17.336142" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-05T14:31:14.334656" elapsed="3.002024"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:07.601377" elapsed="9.735303"/>
+</kw>
+<kw name="Acessar" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:17.338845" level="INFO">Clicking element '//a[@href='#contato'][contains(.,'Agende uma apresentação')]'.</msg>
+<arg>${button_apresentação}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:17.338313" elapsed="0.157823"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-05T14:31:21.497473" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-05T14:31:17.497136" elapsed="4.000337"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:17.337809" elapsed="4.159664"/>
+</kw>
+<kw name="Nome" owner="keywords">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2024-04-05T14:31:21.499041" level="INFO">${Primeiro Nome} = Maitê</msg>
+<var>${Primeiro Nome}</var>
+<status status="PASS" start="2024-04-05T14:31:21.499041" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:21.500046" level="INFO">Typing text 'Maitê' into text field '//input[contains(@id,'167399-field')]'.</msg>
+<arg>${nome}</arg>
+<arg>${Primeiro Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:21.499041" elapsed="0.181932"/>
+</kw>
+<kw name="Last Name" owner="FakerLibrary">
+<msg time="2024-04-05T14:31:21.680973" level="INFO">${Segundo Nome} = Fernandes</msg>
+<var>${Segundo Nome}</var>
+<status status="PASS" start="2024-04-05T14:31:21.680973" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:21.681973" level="INFO">Typing text 'Fernandes' into text field '//input[contains(@id,'167399-field')]'.</msg>
+<arg>${nome}</arg>
+<arg>${Segundo Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:21.681973" elapsed="0.144618"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:21.498537" elapsed="0.328054"/>
+</kw>
+<kw name="E-mail" owner="keywords">
+<kw name="Free Email" owner="FakerLibrary">
+<msg time="2024-04-05T14:31:21.827589" level="INFO">${EmailData} = erickmoura@ig.com.br</msg>
+<var>${EmailData}</var>
+<status status="PASS" start="2024-04-05T14:31:21.827589" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:21.829093" level="INFO">Typing text 'erickmoura@ig.com.br' into text field '//input[contains(@type,'email')]'.</msg>
+<arg>${Email}</arg>
+<arg>${EmailData}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:21.827589" elapsed="0.152729"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:21.827589" elapsed="0.153729"/>
+</kw>
+<kw name="Telefone" owner="keywords">
+<kw name="Phone Number" owner="FakerLibrary">
+<msg time="2024-04-05T14:31:21.982318" level="INFO">${TelefoneData} = +55 (061) 3187-9496</msg>
+<var>${TelefoneData}</var>
+<status status="PASS" start="2024-04-05T14:31:21.981318" elapsed="0.001000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:21.983320" level="INFO">Typing text '+55 (061) 3187-9496' into text field '//input[@id='text-yui_3_17_2_1_1593039425574_26431-field']'.</msg>
+<arg>${Telefone}</arg>
+<arg>${TelefoneData}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:21.982318" elapsed="0.162040"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:21.981318" elapsed="0.163040"/>
+</kw>
+<kw name="Mensagem" owner="keywords">
+<kw name="Text" owner="FakerLibrary">
+<msg time="2024-04-05T14:31:22.145357" level="INFO">${MensagemText} = Itaque quisquam minus tenetur consectetur. Esse nesciunt omnis. Ipsam nisi voluptates fugit officiis ullam tempora.</msg>
+<var>${MensagemText}</var>
+<doc>Generate a text string.</doc>
+<status status="PASS" start="2024-04-05T14:31:22.145357" elapsed="0.000999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:22.146356" level="INFO">Typing text 'Itaque quisquam minus tenetur consectetur. Esse nesciunt omnis. Ipsam nisi voluptates fugit officiis ullam tempora.' into text field '//textarea[@id='textarea-yui_3_17_2_1_1593039425574_26432-field']'.</msg>
+<arg>${Mensagem}</arg>
+<arg>${MensagemText}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:22.146356" elapsed="0.450885"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:22.145357" elapsed="0.451884"/>
+</kw>
+<kw name="Clicar na Listagem" owner="keywords">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:22.599242" level="INFO">Selecting options from selection list 'select-yui_3_17_2_1_1593033605278_168358-field' by label Família.</msg>
+<arg>select-yui_3_17_2_1_1593033605278_168358-field</arg>
+<arg>Família</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-04-05T14:31:22.599242" elapsed="0.107337"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-05T14:31:27.708057" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-05T14:31:22.706579" elapsed="5.001478"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:22.598241" elapsed="5.109816"/>
+</kw>
+<kw name="Submit" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T14:31:27.710160" level="INFO">Clicking element '//span[contains(@class,'form-submit-button-label')]'.</msg>
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T14:31:27.709154" elapsed="0.101610"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-05T14:31:32.811931" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-05T14:31:27.810764" elapsed="5.001167"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:27.709154" elapsed="5.102777"/>
+</kw>
+<status status="PASS" start="2024-04-05T14:31:07.600379" elapsed="25.212602"/>
+</test>
+<status status="PASS" start="2024-04-05T14:31:06.803423" elapsed="26.010559"/>
+</suite>
+<status status="PASS" start="2024-04-05T14:31:06.782750" elapsed="26.033231"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste-Lekto">Teste-Lekto</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Enviarform">Teste-Lekto.Enviarform</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
