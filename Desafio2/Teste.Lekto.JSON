@@ -24,7 +24,7 @@
 									"var authObjects = jsonData.entries.filter(entry => entry.Category === \"Authentication & Authorization\");",
 									"",
 									"pm.test(\"Number of objects with Category: Authentication & Authorization is correct\", function () {",
-									"    pm.expect(authObjects.length).to.be.above(0);",
+									"    pm.expect(authObjects.length).to.be.above(1);",
 									"});",
 									"",
 									"console.log(authObjects);",
