@@ -16,10 +16,11 @@ Acessar
     Sleep   4s
 
 Nome
-    ${Primeiro Nome}               FakerLibrary.FirstName
-    Input text          ${nome}           ${Primeiro Nome}    
-    ${Segundo Nome}               FakerLibrary.LastName
-    Input text          ${nome}           ${Segundo Nome} 
+    ${Primeiro Nome}               FakerLibrary.FirstName   
+    ${Sobrenome}                   FakerLibrary.LastName
+    Input text          ${nome}           ${Primeiro Nome}    ${Sobrenome}  
+
+
 
 E-mail
     ${EmailData}                   FakerLibrary.FreeEmail
