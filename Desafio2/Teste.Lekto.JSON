@@ -16,19 +16,36 @@
 							"listen": "test",
 							"script": {
 								"exec": [
+									"// Verificar se a resposta é bem-sucedida (código 200)",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"var jsonData = pm.response.json();",
-									"var authObjects = jsonData.entries.filter(entry => entry.Category === \"Authentication & Authorization\");",
+									"// Converter a resposta JSON em objeto JavaScript",
+									"var responseData = pm.response.json().entries;",
 									"",
-									"pm.test(\"Number of objects with Category: Authentication & Authorization is correct\", function () {",
-									"    pm.expect(authObjects.length).to.be.above(1);",
+									"// Filtrar os objetos com propriedade \"Category\" igual a \"Authentication & Authorization\"",
+									"var authObjects = responseData.filter(function(obj) {",
+									"    return obj.Category === \"Authentication & Authorization\";",
 									"});",
 									"",
-									"console.log(authObjects);",
-									""
+									"// Contar o número de objetos encontrados",
+									"var authObjectsCount = authObjects.length;",
+									"",
+									"// Imprimir os objetos encontrados no console na forma de texto",
+									"console.log(\"Objetos com a propriedade 'Category: Authentication & Authorization':\");",
+									"for (var i = 0; i < authObjectsCount; i++) {",
+									"    console.log(\"Objeto \" + (i + 1) + \":\");",
+									"    console.log(JSON.stringify(authObjects[i], null, 2));",
+									"}",
+									"",
+									"// Exibir o número total de elementos encontrados",
+									"console.log(\"Total de elementos encontrados: \" + authObjectsCount);",
+									"",
+									"// Verificar se a quantidade de objetos com propriedade \"Category\" igual a \"Authentication & Authorization\" é maior que 0",
+									"pm.test(\"Number of objects with Category: Authentication & Authorization is correct\", function () {",
+									"    pm.expect(authObjectsCount).to.be.above(0);",
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -45,7 +62,7 @@
 							"mode": "formdata",
 							"formdata": []
 						},
-						"url": "https://api.publicapis.org/entries"
+						"url": "{{url}}/entries"
 					},
 					"response": [
 						{
