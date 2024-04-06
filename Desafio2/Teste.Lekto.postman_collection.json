@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "fdc5e23c-95db-4ccd-a27a-85e53b0ef379",
-		"name": "New Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"name": "Teste.Lekto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "34094761"
 	},
 	"item": [
@@ -45,18 +45,7 @@
 							"mode": "formdata",
 							"formdata": []
 						},
-						"url": {
-							"raw": "https://api.publicapis.org/entries",
-							"protocol": "https",
-							"host": [
-								"api",
-								"publicapis",
-								"org"
-							],
-							"path": [
-								"entries"
-							]
-						}
+						"url": "https://api.publicapis.org/entries"
 					},
 					"response": [
 						{
@@ -68,18 +57,7 @@
 									"mode": "formdata",
 									"formdata": []
 								},
-								"url": {
-									"raw": "https://api.publicapis.org/entries",
-									"protocol": "https",
-									"host": [
-										"api",
-										"publicapis",
-										"org"
-									],
-									"path": [
-										"entries"
-									]
-								}
+								"url": "https://api.publicapis.org/entries"
 							},
 							"status": "OK",
 							"code": 200,
