@@ -9,16 +9,16 @@ Library         FakerLibrary    locale=pt_BR
 
 Abrir 
   Open Browser    https://www.lekto.com.br/       chrome
-    Sleep   3s
+    Sleep   2s
 
 Acessar 
     Click Element       ${button_apresentação}
-    Sleep   4s
+    Sleep   3s
 
 Nome
     ${Primeiro Nome}               FakerLibrary.FirstName   
     ${Sobrenome}                   FakerLibrary.LastName
-    Input text          ${nome}           ${Primeiro Nome}    ${Sobrenome}  
+    Input text          ${nome}           ${Primeiro Nome } ${ Sobrenome}  
 
 
 
