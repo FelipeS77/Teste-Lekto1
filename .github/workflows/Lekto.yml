@@ -36,9 +36,8 @@ jobs:
         run: sudo npm install -g newman-reporter-htmlextra
         
       # Runs a set of commands using the runners shell
-      - name: Step 3 Execute collection
-      - run: 
-    newman run ./Desafio2/Teste.Lekto-cy.JSON --reporters cli,htmlextra --reporter-htmlextra-export ./results/Report.html
+      - name: Step 3 Execute collection 
+      - run: newman run Desafio2/Teste.Lekto-cy.json -e verifi.json --reporters cli, -r htmlextra --reporter-htmlextra-export ./results/Report.html
    
       # Runs a set of commands using the runners shell
       - name: Step 4 Archive production artifacts
