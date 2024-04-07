@@ -1,73 +1,19 @@
 {
 	"info": {
-		"_postman_id": "9562b0ad-3fbe-4128-92f4-e87cf30ac1a9",
-		"name": "Teste.Lekto",
+		"_postman_id": "6fb8c199-bd7c-405b-b56d-82309180becc",
+		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "34094761",
-		"_collection_link": "https://bold-crater-85557.postman.co/workspace/Team-Workspace~59991379-7ba1-43b6-823d-dc869218e8f6/collection/34094761-9562b0ad-3fbe-4128-92f4-e87cf30ac1a9?action=share&source=collection_link&creator=34094761"
+		"_collection_link": "https://bold-crater-85557.postman.co/workspace/Team-Workspace~59991379-7ba1-43b6-823d-dc869218e8f6/collection/34094761-6fb8c199-bd7c-405b-b56d-82309180becc?action=share&source=collection_link&creator=34094761"
 	},
 	"item": [
 		{
-			"name": "teste-lekto",
-			"item": [
-				{
-					"name": "Get all Inf",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"// Verificar se a resposta é bem-sucedida (código 200)",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"// Converter a resposta JSON em objeto JavaScript",
-									"var responseData = pm.response.json().entries;",
-									"",
-									"// Filtrar os objetos com propriedade \"Category\" igual a \"Authentication & Authorization\"",
-									"var authObjects = responseData.filter(function(obj) {",
-									"    return obj.Category === \"Authentication & Authorization\";",
-									"});",
-									"",
-									"// Contar o número de objetos encontrados",
-									"var authObjectsCount = authObjects.length;",
-									"",
-									"// Imprimir os objetos encontrados no console na forma de texto",
-									"console.log(\"Objetos com a propriedade 'Category: Authentication & Authorization':\");",
-									"for (var i = 0; i < authObjectsCount; i++) {",
-									"    console.log(\"Objeto \" + (i + 1) + \":\");",
-									"    console.log(JSON.stringify(authObjects[i], null, 2));",
-									"}",
-									"",
-									"// Exibir o número total de elementos encontrados",
-									"console.log(\"Total de elementos encontrados: \" + authObjectsCount);",
-									"",
-									"// Verificar se a quantidade de objetos com propriedade \"Category\" igual a \"Authentication & Authorization\" é maior que 0",
-									"pm.test(\"Number of objects with Category: Authentication & Authorization is correct\", function () {",
-									"    pm.expect(authObjectsCount).to.be.above(0);",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": "{{url}}/entries"
-					},
-					"response": []
-				}
-			]
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
