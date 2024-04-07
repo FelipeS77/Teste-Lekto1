@@ -37,7 +37,7 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Step 3 Execute collection
-        run: newman run Desafio2/Teste.Lekto.JSON -e Desafio2/envi.JSON --reporters cli, -r htmlextra --reporter-htmlextra-export ./results/Report.html
+        run: newman run Desafio2/Lekto.json -e Desafio2/Lekto-enviroments.json --reporters cli, -r htmlextra --reporter-htmlextra-export ./results/Report.html
    
       # Runs a set of commands using the runners shell
       - name: Step 4 Archive production artifacts

@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "6fb8c199-bd7c-405b-b56d-82309180becc",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34094761",
+		"_collection_link": "https://bold-crater-85557.postman.co/workspace/Team-Workspace~59991379-7ba1-43b6-823d-dc869218e8f6/collection/34094761-6fb8c199-bd7c-405b-b56d-82309180becc?action=share&source=collection_link&creator=34094761"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verificar se a resposta é bem-sucedida (código 200)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Converter a resposta JSON em objeto JavaScript\r",
+							"var responseData = pm.response.json().entries;\r",
+							"\r",
+							"// Filtrar os objetos com propriedade \"Category\" igual a \"Authentication & Authorization\"\r",
+							"var authObjects = responseData.filter(function(obj) {\r",
+							"    return obj.Category === \"Authentication & Authorization\";\r",
+							"});\r",
+							"\r",
+							"// Contar o número de objetos encontrados\r",
+							"var authObjectsCount = authObjects.length;\r",
+							"\r",
+							"// Imprimir os objetos encontrados no console na forma de texto\r",
+							"console.log(\"Objetos com a propriedade 'Category: Authentication & Authorization':\");\r",
+							"for (var i = 0; i < authObjectsCount; i++) {\r",
+							"    console.log(\"Objeto \" + (i + 1) + \":\");\r",
+							"    console.log(JSON.stringify(authObjects[i], null, 2));\r",
+							"}\r",
+							"\r",
+							"// Exibir o número total de elementos encontrados\r",
+							"console.log(\"Total de elementos encontrados: \" + authObjectsCount);\r",
+							"\r",
+							"// Verificar se a quantidade de objetos com propriedade \"Category\" igual a \"Authentication & Authorization\" é maior que 0\r",
+							"pm.test(\"Number of objects with Category: Authentication & Authorization is correct\", function () {\r",
+							"    pm.expect(authObjectsCount).to.be.above(0);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/entries"
+			},
+			"response": []
+		}
+	]
+}
