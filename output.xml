@@ -1,289 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-06T11:19:21.615807" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-07T12:08:46.252032" rpa="false" schemaversion="5">
 <suite id="s1" name="Enviarform" source="C:\Users\viyte\OneDrive\Documentos\GitHub\Teste-Lekto1\Desafio1\enviarform.robot">
 <test id="s1-t1" name="Cenário 1 : Preencher Formulário" line="10">
 <kw name="Abrir" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:22.075842" level="INFO">Opening browser 'chrome' to base url 'https://www.lekto.com.br/'.</msg>
+<msg time="2024-04-07T12:08:46.710826" level="INFO">Opening browser 'chrome' to base url 'https://www.lekto.com.br/'.</msg>
 <arg>https://www.lekto.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-06T11:19:22.074842" elapsed="4.022301"/>
+<status status="PASS" start="2024-04-07T12:08:46.709817" elapsed="4.007038"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-06T11:19:29.097610" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2024-04-07T12:08:52.717097" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-06T11:19:26.097143" elapsed="3.000467"/>
+<status status="PASS" start="2024-04-07T12:08:50.716855" elapsed="2.000242"/>
 </kw>
-<status status="PASS" start="2024-04-06T11:19:22.074842" elapsed="7.022768"/>
+<status status="PASS" start="2024-04-07T12:08:46.709817" elapsed="6.007280"/>
 </kw>
 <kw name="Acessar" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button_apresentação}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-07T12:08:52.718170" elapsed="0.030747"/>
+</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:29.098660" level="INFO">Clicking element '//a[@href='#contato'][contains(.,'Agende uma apresentação')]'.</msg>
+<msg time="2024-04-07T12:08:52.749925" level="INFO">Clicking element '//a[@href='#contato'][contains(.,'Agende uma apresentação')]'.</msg>
 <arg>${button_apresentação}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T11:19:29.098135" elapsed="0.060214"/>
+<status status="PASS" start="2024-04-07T12:08:52.749925" elapsed="0.083497"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-06T11:19:33.158400" level="INFO">Slept 4 seconds.</msg>
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-06T11:19:29.158349" elapsed="4.000051"/>
-</kw>
-<status status="PASS" start="2024-04-06T11:19:29.098135" elapsed="4.060265"/>
+<status status="PASS" start="2024-04-07T12:08:52.718170" elapsed="0.116252"/>
 </kw>
 <kw name="Nome" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${nome}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-07T12:08:52.835422" elapsed="1.479682"/>
+</kw>
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-04-06T11:19:33.158400" level="INFO">${Primeiro Nome} = Danilo</msg>
+<msg time="2024-04-07T12:08:54.316106" level="INFO">${Primeiro Nome} = Maria Cecília</msg>
 <var>${Primeiro Nome}</var>
-<status status="PASS" start="2024-04-06T11:19:33.158400" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:08:54.316106" elapsed="0.000000"/>
 </kw>
 <kw name="Last Name" owner="FakerLibrary">
-<msg time="2024-04-06T11:19:33.158400" level="INFO">${Sobrenome} = Lopes</msg>
+<msg time="2024-04-07T12:08:54.316106" level="INFO">${Sobrenome} = Costa</msg>
 <var>${Sobrenome}</var>
-<status status="PASS" start="2024-04-06T11:19:33.158400" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:08:54.316106" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:33.159812" level="INFO">Typing text 'Danilo Lopes' into text field '//input[contains(@id,'167399-field')]'.</msg>
+<msg time="2024-04-07T12:08:54.316106" level="INFO">Typing text 'Maria Cecília Costa' into text field '//input[contains(@id,'167399-field')]'.</msg>
 <arg>${nome}</arg>
 <arg>${Primeiro Nome } ${ Sobrenome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.158400" elapsed="0.089697"/>
+<status status="PASS" start="2024-04-07T12:08:54.316106" elapsed="0.236035"/>
 </kw>
-<status status="PASS" start="2024-04-06T11:19:33.158400" elapsed="0.089697"/>
+<status status="PASS" start="2024-04-07T12:08:52.834422" elapsed="1.717719"/>
 </kw>
 <kw name="E-mail" owner="keywords">
 <kw name="Free Email" owner="FakerLibrary">
-<msg time="2024-04-06T11:19:33.249096" level="INFO">${EmailData} = da-luzyuri@ig.com.br</msg>
+<msg time="2024-04-07T12:08:54.553141" level="INFO">${EmailData} = bianca04@uol.com.br</msg>
 <var>${EmailData}</var>
-<status status="PASS" start="2024-04-06T11:19:33.249096" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:08:54.553141" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:33.249096" level="INFO">Typing text 'da-luzyuri@ig.com.br' into text field '//input[contains(@type,'email')]'.</msg>
+<msg time="2024-04-07T12:08:54.553141" level="INFO">Typing text 'bianca04@uol.com.br' into text field '//input[contains(@type,'email')]'.</msg>
 <arg>${Email}</arg>
 <arg>${EmailData}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.249096" elapsed="0.087056"/>
+<status status="PASS" start="2024-04-07T12:08:54.553141" elapsed="0.164653"/>
 </kw>
-<status status="PASS" start="2024-04-06T11:19:33.248097" elapsed="0.089057"/>
+<status status="PASS" start="2024-04-07T12:08:54.552141" elapsed="0.165653"/>
 </kw>
 <kw name="Telefone" owner="keywords">
 <kw name="Phone Number" owner="FakerLibrary">
-<msg time="2024-04-06T11:19:33.337691" level="INFO">${TelefoneData} = (041) 3615-1130</msg>
+<msg time="2024-04-07T12:08:54.719300" level="INFO">${TelefoneData} = 0900-516-7450</msg>
 <var>${TelefoneData}</var>
-<status status="PASS" start="2024-04-06T11:19:33.337691" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:08:54.719300" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:33.337691" level="INFO">Typing text '(041) 3615-1130' into text field '//input[@id='text-yui_3_17_2_1_1593039425574_26431-field']'.</msg>
+<msg time="2024-04-07T12:08:54.719300" level="INFO">Typing text '0900-516-7450' into text field '//input[@id='text-yui_3_17_2_1_1593039425574_26431-field']'.</msg>
 <arg>${Telefone}</arg>
 <arg>${TelefoneData}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.337691" elapsed="0.077143"/>
+<status status="PASS" start="2024-04-07T12:08:54.719300" elapsed="0.162826"/>
 </kw>
-<status status="PASS" start="2024-04-06T11:19:33.337154" elapsed="0.077680"/>
+<status status="PASS" start="2024-04-07T12:08:54.717794" elapsed="0.164332"/>
 </kw>
 <kw name="Mensagem" owner="keywords">
 <kw name="Text" owner="FakerLibrary">
-<msg time="2024-04-06T11:19:33.415833" level="INFO">${MensagemText} = Autem ad ea. Ut sint repellat praesentium. Esse corrupti ipsam repudiandae quasi quaerat aliquam.</msg>
+<msg time="2024-04-07T12:08:54.883126" level="INFO">${MensagemText} = Deleniti accusamus doloribus quaerat. Omnis officiis unde officia autem. Similique pariatur aperiam quidem ab ut.</msg>
 <var>${MensagemText}</var>
 <doc>Generate a text string.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.415833" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:08:54.883126" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:33.416837" level="INFO">Typing text 'Autem ad ea. Ut sint repellat praesentium. Esse corrupti ipsam repudiandae quasi quaerat aliquam.' into text field '//textarea[@id='textarea-yui_3_17_2_1_1593039425574_26432-field']'.</msg>
+<msg time="2024-04-07T12:08:54.883126" level="INFO">Typing text 'Deleniti accusamus doloribus quaerat. Omnis officiis unde officia autem. Similique pariatur aperiam quidem ab ut.' into text field '//textarea[@id='textarea-yui_3_17_2_1_1593039425574_26432-field']'.</msg>
 <arg>${Mensagem}</arg>
 <arg>${MensagemText}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.416837" elapsed="0.182953"/>
+<status status="PASS" start="2024-04-07T12:08:54.883126" elapsed="0.267186"/>
 </kw>
-<status status="PASS" start="2024-04-06T11:19:33.415833" elapsed="0.183957"/>
+<status status="PASS" start="2024-04-07T12:08:54.882126" elapsed="0.268186"/>
 </kw>
 <kw name="Clicar na Listagem" owner="keywords">
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:33.599790" level="INFO">Selecting options from selection list 'select-yui_3_17_2_1_1593033605278_168358-field' by label Família.</msg>
+<msg time="2024-04-07T12:08:55.151312" level="INFO">Selecting options from selection list 'select-yui_3_17_2_1_1593033605278_168358-field' by label Família.</msg>
 <arg>select-yui_3_17_2_1_1593033605278_168358-field</arg>
 <arg>Família</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.599790" elapsed="0.056908"/>
+<status status="PASS" start="2024-04-07T12:08:55.151312" elapsed="0.070712"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-06T11:19:38.656906" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-06T11:19:33.656698" elapsed="5.000208"/>
-</kw>
-<status status="PASS" start="2024-04-06T11:19:33.599790" elapsed="5.057116"/>
+<status status="PASS" start="2024-04-07T12:08:55.151312" elapsed="0.070712"/>
 </kw>
 <kw name="Submit" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-06T11:19:38.657912" level="INFO">Clicking element '//span[contains(@class,'form-submit-button-label')]'.</msg>
-<msg time="2024-04-06T11:19:38.658912" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.106)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA6D7072+63090]
-	(No symbol) [0x00007FF7DA642CC2]
-	(No symbol) [0x00007FF7DA4DEC65]
-	(No symbol) [0x00007FF7DA4BCA7C]
-	(No symbol) [0x00007FF7DA54D687]
-	(No symbol) [0x00007FF7DA562AC1]
-	(No symbol) [0x00007FF7DA546D83]
-	(No symbol) [0x00007FF7DA5183A8]
-	(No symbol) [0x00007FF7DA519441]
-	GetHandleVerifier [0x00007FF7DAAD25CD+4238285]
-	GetHandleVerifier [0x00007FF7DAB0F72D+4488493]
-	GetHandleVerifier [0x00007FF7DAB07A0F+4456463]
-	GetHandleVerifier [0x00007FF7DA7B05B6+953270]
-	(No symbol) [0x00007FF7DA64E58F]
-	(No symbol) [0x00007FF7DA649264]
-	(No symbol) [0x00007FF7DA64939B]
-	(No symbol) [0x00007FF7DA639BD4]
-	BaseThreadInitThunk [0x00007FFE885B257D+29]
-	RtlUserThreadStart [0x00007FFE89BCAA58+40]
-</msg>
-<msg time="2024-04-06T11:19:38.660914" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.106)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA6D7072+63090]
-	(No symbol) [0x00007FF7DA642CC2]
-	(No symbol) [0x00007FF7DA4DEC65]
-	(No symbol) [0x00007FF7DA4BCA7C]
-	(No symbol) [0x00007FF7DA54D687]
-	(No symbol) [0x00007FF7DA562AC1]
-	(No symbol) [0x00007FF7DA546D83]
-	(No symbol) [0x00007FF7DA5183A8]
-	(No symbol) [0x00007FF7DA519441]
-	GetHandleVerifier [0x00007FF7DAAD25CD+4238285]
-	GetHandleVerifier [0x00007FF7DAB0F72D+4488493]
-	GetHandleVerifier [0x00007FF7DAB07A0F+4456463]
-	GetHandleVerifier [0x00007FF7DA7B05B6+953270]
-	(No symbol) [0x00007FF7DA64E58F]
-	(No symbol) [0x00007FF7DA649264]
-	(No symbol) [0x00007FF7DA64939B]
-	(No symbol) [0x00007FF7DA639BD4]
-	BaseThreadInitThunk [0x00007FFE885B257D+29]
-	RtlUserThreadStart [0x00007FFE89BCAA58+40]
-</msg>
+<msg time="2024-04-07T12:08:55.223025" level="INFO">Clicking element '//span[contains(@class,'form-submit-button-label')]'.</msg>
 <arg>${Submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-04-06T11:19:38.656906" elapsed="0.006004">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.106)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA6D7072+63090]
-	(No symbol) [0x00007FF7DA642CC2]
-	(No symbol) [0x00007FF7DA4DEC65]
-	(No symbol) [0x00007FF7DA4BCA7C]
-	(No symbol) [0x00007FF7DA54D687]
-	(No symbol) [0x00007FF7DA562AC1]
-	(No symbol) [0x00007FF7DA546D83]
-	(No symbol) [0x00007FF7DA5183A8]
-	(No symbol) [0x00007FF7DA519441]
-	GetHandleVerifier [0x00007FF7DAAD25CD+4238285]
-	GetHandleVerifier [0x00007FF7DAB0F72D+4488493]
-	GetHandleVerifier [0x00007FF7DAB07A0F+4456463]
-	GetHandleVerifier [0x00007FF7DA7B05B6+953270]
-	(No symbol) [0x00007FF7DA64E58F]
-	(No symbol) [0x00007FF7DA649264]
-	(No symbol) [0x00007FF7DA64939B]
-	(No symbol) [0x00007FF7DA639BD4]
-	BaseThreadInitThunk [0x00007FFE885B257D+29]
-	RtlUserThreadStart [0x00007FFE89BCAA58+40]
-</status>
+<status status="PASS" start="2024-04-07T12:08:55.223025" elapsed="0.078690"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-07T12:09:00.302934" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-04-06T11:19:38.662910" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:08:55.301715" elapsed="5.001219"/>
 </kw>
-<status status="FAIL" start="2024-04-06T11:19:38.656906" elapsed="0.006004">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.106)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA6D7072+63090]
-	(No symbol) [0x00007FF7DA642CC2]
-	(No symbol) [0x00007FF7DA4DEC65]
-	(No symbol) [0x00007FF7DA4BCA7C]
-	(No symbol) [0x00007FF7DA54D687]
-	(No symbol) [0x00007FF7DA562AC1]
-	(No symbol) [0x00007FF7DA546D83]
-	(No symbol) [0x00007FF7DA5183A8]
-	(No symbol) [0x00007FF7DA519441]
-	GetHandleVerifier [0x00007FF7DAAD25CD+4238285]
-	GetHandleVerifier [0x00007FF7DAB0F72D+4488493]
-	GetHandleVerifier [0x00007FF7DAB07A0F+4456463]
-	GetHandleVerifier [0x00007FF7DA7B05B6+953270]
-	(No symbol) [0x00007FF7DA64E58F]
-	(No symbol) [0x00007FF7DA649264]
-	(No symbol) [0x00007FF7DA64939B]
-	(No symbol) [0x00007FF7DA639BD4]
-	BaseThreadInitThunk [0x00007FFE885B257D+29]
-	RtlUserThreadStart [0x00007FFE89BCAA58+40]
-</status>
+<status status="PASS" start="2024-04-07T12:08:55.223025" elapsed="5.079909"/>
 </kw>
-<status status="FAIL" start="2024-04-06T11:19:22.073842" elapsed="16.589068">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.106)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA6D7072+63090]
-	(No symbol) [0x00007FF7DA642CC2]
-	(No symbol) [0x00007FF7DA4DEC65]
-	(No symbol) [0x00007FF7DA4BCA7C]
-	(No symbol) [0x00007FF7DA54D687]
-	(No symbol) [0x00007FF7DA562AC1]
-	(No symbol) [0x00007FF7DA546D83]
-	(No symbol) [0x00007FF7DA5183A8]
-	(No symbol) [0x00007FF7DA519441]
-	GetHandleVerifier [0x00007FF7DAAD25CD+4238285]
-	GetHandleVerifier [0x00007FF7DAB0F72D+4488493]
-	GetHandleVerifier [0x00007FF7DAB07A0F+4456463]
-	GetHandleVerifier [0x00007FF7DA7B05B6+953270]
-	(No symbol) [0x00007FF7DA64E58F]
-	(No symbol) [0x00007FF7DA649264]
-	(No symbol) [0x00007FF7DA64939B]
-	(No symbol) [0x00007FF7DA639BD4]
-	BaseThreadInitThunk [0x00007FFE885B257D+29]
-	RtlUserThreadStart [0x00007FFE89BCAA58+40]
-</status>
+<status status="PASS" start="2024-04-07T12:08:46.708312" elapsed="13.594622"/>
 </test>
-<status status="FAIL" start="2024-04-06T11:19:21.616802" elapsed="17.048568"/>
+<status status="PASS" start="2024-04-07T12:08:46.253032" elapsed="14.050909"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Enviarform">Enviarform</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Enviarform">Enviarform</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-06T11:19:38.658912" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.106)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA6D7072+63090]
-	(No symbol) [0x00007FF7DA642CC2]
-	(No symbol) [0x00007FF7DA4DEC65]
-	(No symbol) [0x00007FF7DA4BCA7C]
-	(No symbol) [0x00007FF7DA54D687]
-	(No symbol) [0x00007FF7DA562AC1]
-	(No symbol) [0x00007FF7DA546D83]
-	(No symbol) [0x00007FF7DA5183A8]
-	(No symbol) [0x00007FF7DA519441]
-	GetHandleVerifier [0x00007FF7DAAD25CD+4238285]
-	GetHandleVerifier [0x00007FF7DAB0F72D+4488493]
-	GetHandleVerifier [0x00007FF7DAB07A0F+4456463]
-	GetHandleVerifier [0x00007FF7DA7B05B6+953270]
-	(No symbol) [0x00007FF7DA64E58F]
-	(No symbol) [0x00007FF7DA649264]
-	(No symbol) [0x00007FF7DA64939B]
-	(No symbol) [0x00007FF7DA639BD4]
-	BaseThreadInitThunk [0x00007FFE885B257D+29]
-	RtlUserThreadStart [0x00007FFE89BCAA58+40]
-</msg>
 </errors>
 </robot>
