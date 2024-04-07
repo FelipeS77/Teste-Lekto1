@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: testeLektoCI
+name: Consulta CEP
 
 # Controls when the action will run. 
 on:
@@ -13,11 +13,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  
+  # This workflow contains a single job called "build"
   build:
-   
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -27,7 +27,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Step 1 Check version Newman and Node
-        run: 
+        run: |
           newman --version
           node --version
           
@@ -37,7 +37,7 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Step 3 Execute collection
-        run: newman run Desafio2/Teste.Lekto.JSON -e Desafio2/envi.JSON   --reporters cli, -r htmlextra --reporter-htmlextra-export results/Report.html
+        run: newman run Desafio2/Teste.Lekto.JSON -e Desafio2/envi.JSON --reporters cli, -r htmlextra --reporter-htmlextra-export ./results/Report.html
    
       # Runs a set of commands using the runners shell
       - name: Step 4 Archive production artifacts
