@@ -34,4 +34,5 @@ A Pasta 2 desse repositório foi criada para abranger os desafios do processo se
 o import dos arquivos do Desafio2 do repositório Teste-Lekto1 para seu computador em uma pasta de sua preferencia ou na padrão do git.
 
 Acessando o postman de maneira correta será possível clicar no botao de import que abre um pop up, agora basta inserir o arquivos <b>Teste.Lekto.JSON</b> e <b>verifi.json</b> clique no botão para confirmar a importação dos arquivos. 
-Clique na colection Teste.Lekto pasta Teste-Lekto depois em Get all inf e no botão send para rodar os testes. vá até o console e os resultados dos testes serão visiveis.   
+Clique na colection Teste.Lekto pasta Teste-Lekto depois em Get all inf e no botão send para rodar os testes. vá até o console e os resultados dos testes serão visiveis.
+O arquivo Gitlab-ci.yml está na pasta github/workflows e é automaticamente executado sempre que acontece um comit na branch main pode também ser executado manualmente indo até o actions no github e clicando em re-run.
