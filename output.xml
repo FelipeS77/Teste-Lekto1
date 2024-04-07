@@ -1,145 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-07T12:08:46.252032" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-07T12:32:12.598003" rpa="false" schemaversion="5">
 <suite id="s1" name="Enviarform" source="C:\Users\viyte\OneDrive\Documentos\GitHub\Teste-Lekto1\Desafio1\enviarform.robot">
-<test id="s1-t1" name="Cenário 1 : Preencher Formulário" line="10">
+<test id="s1-t1" name="Cenário 1 : Acessar a url." line="10">
 <kw name="Abrir" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:46.710826" level="INFO">Opening browser 'chrome' to base url 'https://www.lekto.com.br/'.</msg>
+<msg time="2024-04-07T12:32:13.056001" level="INFO">Opening browser 'chrome' to base url 'https://www.lekto.com.br/'.</msg>
 <arg>https://www.lekto.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-07T12:08:46.709817" elapsed="4.007038"/>
+<status status="PASS" start="2024-04-07T12:32:13.056001" elapsed="4.102935"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-07T12:08:52.717097" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-07T12:08:50.716855" elapsed="2.000242"/>
+<status status="PASS" start="2024-04-07T12:32:13.055495" elapsed="4.103441"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:46.709817" elapsed="6.007280"/>
-</kw>
+<status status="PASS" start="2024-04-07T12:32:13.054495" elapsed="4.105441"/>
+</test>
+<test id="s1-t2" name="Cenário 2 : Acessar área de agendar uma apresentação." line="13">
 <kw name="Acessar" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${button_apresentação}</arg>
+<arg>${Button_apresentação}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-07T12:08:52.718170" elapsed="0.030747"/>
+<status status="PASS" start="2024-04-07T12:32:17.161935" elapsed="0.036704"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:52.749925" level="INFO">Clicking element '//a[@href='#contato'][contains(.,'Agende uma apresentação')]'.</msg>
-<arg>${button_apresentação}</arg>
+<msg time="2024-04-07T12:32:17.198639" level="INFO">Clicking element '//a[@href='#contato'][contains(.,'Agende uma apresentação')]'.</msg>
+<arg>${Button_apresentação}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T12:08:52.749925" elapsed="0.083497"/>
+<status status="PASS" start="2024-04-07T12:32:17.198639" elapsed="0.144003"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:52.718170" elapsed="0.116252"/>
+<status status="PASS" start="2024-04-07T12:32:17.160936" elapsed="0.181706"/>
 </kw>
+<status status="PASS" start="2024-04-07T12:32:17.160936" elapsed="0.182708"/>
+</test>
+<test id="s1-t3" name="Cenário 3 : Preencher o campo Nome." line="16">
 <kw name="Nome" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${nome}</arg>
+<arg>${Nome}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-07T12:08:52.835422" elapsed="1.479682"/>
+<status status="PASS" start="2024-04-07T12:32:17.344641" elapsed="1.688557"/>
 </kw>
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-04-07T12:08:54.316106" level="INFO">${Primeiro Nome} = Maria Cecília</msg>
+<msg time="2024-04-07T12:32:19.034202" level="INFO">${Primeiro Nome} = Thiago</msg>
 <var>${Primeiro Nome}</var>
-<status status="PASS" start="2024-04-07T12:08:54.316106" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:32:19.033198" elapsed="0.001004"/>
 </kw>
 <kw name="Last Name" owner="FakerLibrary">
-<msg time="2024-04-07T12:08:54.316106" level="INFO">${Sobrenome} = Costa</msg>
+<msg time="2024-04-07T12:32:19.034202" level="INFO">${Sobrenome} = Melo</msg>
 <var>${Sobrenome}</var>
-<status status="PASS" start="2024-04-07T12:08:54.316106" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:32:19.034202" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:54.316106" level="INFO">Typing text 'Maria Cecília Costa' into text field '//input[contains(@id,'167399-field')]'.</msg>
-<arg>${nome}</arg>
-<arg>${Primeiro Nome } ${ Sobrenome}</arg>
+<msg time="2024-04-07T12:32:19.034202" level="INFO">Typing text 'Thiago' into text field '//input[contains(@id,'167399-field')]'.</msg>
+<arg>${Nome}</arg>
+<arg>${Primeiro Nome }</arg>
+<arg>${ Sobrenome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T12:08:54.316106" elapsed="0.236035"/>
+<status status="PASS" start="2024-04-07T12:32:19.034202" elapsed="0.339572"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:52.834422" elapsed="1.717719"/>
+<status status="PASS" start="2024-04-07T12:32:17.344641" elapsed="2.029133"/>
 </kw>
+<status status="PASS" start="2024-04-07T12:32:17.343644" elapsed="2.030130"/>
+</test>
+<test id="s1-t4" name="Cenário 4 : Preencher o campo E-mail." line="19">
 <kw name="E-mail" owner="keywords">
 <kw name="Free Email" owner="FakerLibrary">
-<msg time="2024-04-07T12:08:54.553141" level="INFO">${EmailData} = bianca04@uol.com.br</msg>
+<msg time="2024-04-07T12:32:19.376288" level="INFO">${EmailData} = martinsmaria-cecilia@uol.com.br</msg>
 <var>${EmailData}</var>
-<status status="PASS" start="2024-04-07T12:08:54.553141" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:32:19.376288" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:54.553141" level="INFO">Typing text 'bianca04@uol.com.br' into text field '//input[contains(@type,'email')]'.</msg>
+<msg time="2024-04-07T12:32:19.376288" level="INFO">Typing text 'martinsmaria-cecilia@uol.com.br' into text field '//input[contains(@type,'email')]'.</msg>
 <arg>${Email}</arg>
 <arg>${EmailData}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T12:08:54.553141" elapsed="0.164653"/>
+<status status="PASS" start="2024-04-07T12:32:19.376288" elapsed="0.130715"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:54.552141" elapsed="0.165653"/>
+<status status="PASS" start="2024-04-07T12:32:19.376288" elapsed="0.130715"/>
 </kw>
+<status status="PASS" start="2024-04-07T12:32:19.375282" elapsed="0.131721"/>
+</test>
+<test id="s1-t5" name="Cenário 5 : Preencher o campo Telefone." line="22">
 <kw name="Telefone" owner="keywords">
 <kw name="Phone Number" owner="FakerLibrary">
-<msg time="2024-04-07T12:08:54.719300" level="INFO">${TelefoneData} = 0900-516-7450</msg>
+<msg time="2024-04-07T12:32:19.509004" level="INFO">${TelefoneData} = 31 3200 1092</msg>
 <var>${TelefoneData}</var>
-<status status="PASS" start="2024-04-07T12:08:54.719300" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:32:19.509004" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:54.719300" level="INFO">Typing text '0900-516-7450' into text field '//input[@id='text-yui_3_17_2_1_1593039425574_26431-field']'.</msg>
+<msg time="2024-04-07T12:32:19.509004" level="INFO">Typing text '31 3200 1092' into text field '//input[@id='text-yui_3_17_2_1_1593039425574_26431-field']'.</msg>
 <arg>${Telefone}</arg>
 <arg>${TelefoneData}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T12:08:54.719300" elapsed="0.162826"/>
+<status status="PASS" start="2024-04-07T12:32:19.509004" elapsed="0.148635"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:54.717794" elapsed="0.164332"/>
+<status status="PASS" start="2024-04-07T12:32:19.508002" elapsed="0.149637"/>
 </kw>
+<status status="PASS" start="2024-04-07T12:32:19.508002" elapsed="0.149637"/>
+</test>
+<test id="s1-t6" name="Cenário 6 : Preencher o campo Mensagem." line="25">
 <kw name="Mensagem" owner="keywords">
 <kw name="Text" owner="FakerLibrary">
-<msg time="2024-04-07T12:08:54.883126" level="INFO">${MensagemText} = Deleniti accusamus doloribus quaerat. Omnis officiis unde officia autem. Similique pariatur aperiam quidem ab ut.</msg>
+<msg time="2024-04-07T12:32:19.659639" level="INFO">${MensagemText} = Aliquid possimus error eos non explicabo. Eum eveniet odio illo facilis nam.</msg>
 <var>${MensagemText}</var>
 <doc>Generate a text string.</doc>
-<status status="PASS" start="2024-04-07T12:08:54.883126" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T12:32:19.659639" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:54.883126" level="INFO">Typing text 'Deleniti accusamus doloribus quaerat. Omnis officiis unde officia autem. Similique pariatur aperiam quidem ab ut.' into text field '//textarea[@id='textarea-yui_3_17_2_1_1593039425574_26432-field']'.</msg>
+<msg time="2024-04-07T12:32:19.659639" level="INFO">Typing text 'Aliquid possimus error eos non explicabo. Eum eveniet odio illo facilis nam.' into text field '//textarea[@id='textarea-yui_3_17_2_1_1593039425574_26432-field']'.</msg>
 <arg>${Mensagem}</arg>
 <arg>${MensagemText}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T12:08:54.883126" elapsed="0.267186"/>
+<status status="PASS" start="2024-04-07T12:32:19.659639" elapsed="0.371178"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:54.882126" elapsed="0.268186"/>
+<status status="PASS" start="2024-04-07T12:32:19.658638" elapsed="0.372179"/>
 </kw>
-<kw name="Clicar na Listagem" owner="keywords">
+<status status="PASS" start="2024-04-07T12:32:19.658638" elapsed="0.373185"/>
+</test>
+<test id="s1-t7" name="Cenário 7 : Preencher o campo listagem." line="28">
+<kw name="Listagem" owner="keywords">
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:55.151312" level="INFO">Selecting options from selection list 'select-yui_3_17_2_1_1593033605278_168358-field' by label Família.</msg>
+<msg time="2024-04-07T12:32:20.032824" level="INFO">Selecting options from selection list 'select-yui_3_17_2_1_1593033605278_168358-field' by label Família.</msg>
 <arg>select-yui_3_17_2_1_1593033605278_168358-field</arg>
 <arg>Família</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-04-07T12:08:55.151312" elapsed="0.070712"/>
+<status status="PASS" start="2024-04-07T12:32:20.032824" elapsed="0.109752"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:55.151312" elapsed="0.070712"/>
+<status status="PASS" start="2024-04-07T12:32:20.032824" elapsed="0.109752"/>
 </kw>
-<kw name="Submit" owner="keywords">
+<status status="PASS" start="2024-04-07T12:32:20.031823" elapsed="0.111750"/>
+</test>
+<test id="s1-t8" name="Cenário 7 : Clicar no botão de envio e finalizar o cadastro." line="31">
+<kw name="Enviar" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-07T12:08:55.223025" level="INFO">Clicking element '//span[contains(@class,'form-submit-button-label')]'.</msg>
+<msg time="2024-04-07T12:32:20.145573" level="INFO">Clicking element '//span[contains(@class,'form-submit-button-label')]'.</msg>
 <arg>${Submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T12:08:55.223025" elapsed="0.078690"/>
+<status status="PASS" start="2024-04-07T12:32:20.145573" elapsed="0.121421"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-07T12:09:00.302934" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-04-07T12:32:25.267472" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-07T12:08:55.301715" elapsed="5.001219"/>
+<status status="PASS" start="2024-04-07T12:32:20.266994" elapsed="5.000478"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:55.223025" elapsed="5.079909"/>
+<status status="PASS" start="2024-04-07T12:32:20.144572" elapsed="5.122900"/>
 </kw>
-<status status="PASS" start="2024-04-07T12:08:46.708312" elapsed="13.594622"/>
+<status status="PASS" start="2024-04-07T12:32:20.144572" elapsed="5.123405"/>
 </test>
-<status status="PASS" start="2024-04-07T12:08:46.253032" elapsed="14.050909"/>
+<status status="PASS" start="2024-04-07T12:32:12.599004" elapsed="12.670978"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Enviarform">Enviarform</stat>
+<stat pass="8" fail="0" skip="0" id="s1" name="Enviarform">Enviarform</stat>
 </suite>
 </statistics>
 <errors>
