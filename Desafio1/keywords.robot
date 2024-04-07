@@ -8,7 +8,7 @@ Library         FakerLibrary    locale=pt_BR
 *** Keywords ***
 
 Abrir 
-  Open Browser    https://www.lekto.com.br/       chrome
+  Open Browser    https://www.lekto.com.br/      chrome
 
 
 Acessar 
