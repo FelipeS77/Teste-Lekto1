@@ -36,3 +36,5 @@ o import dos arquivos do Desafio2 do repositório Teste-Lekto1 para seu computad
 Acessando o postman de maneira correta será possível clicar no botao de import que abre um pop up, agora basta inserir o arquivos <b>Teste.Lekto.JSON</b> e <b>verifi.json</b> clique no botão para confirmar a importação dos arquivos. 
 Clique na colection Teste.Lekto pasta Teste-Lekto depois em Get all inf e no botão send para rodar os testes. vá até o console e os resultados dos testes serão visiveis.
 O arquivo Gitlab-ci.yml está na pasta github/workflows e é automaticamente executado sempre que acontece um comit na branch main pode também ser executado manualmente indo até o actions no github e clicando em re-run.
+
+verificar se o site https://api.publicapis.org/entries está up.
