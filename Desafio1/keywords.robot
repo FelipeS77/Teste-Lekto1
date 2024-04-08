@@ -20,7 +20,7 @@ Nome
     Wait until Element is visible  ${Nome} 
     ${Primeiro Nome}               FakerLibrary.FirstName   
     ${Sobrenome}                   FakerLibrary.LastName
-    Input text     ${Nome}    ${Primeiro Nome }    ${ Sobrenome}  
+    Input text     ${Nome}    ${Primeiro Nome } ${ Sobrenome}  
 
 
 
